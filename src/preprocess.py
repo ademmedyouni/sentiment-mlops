@@ -9,11 +9,10 @@ def clean(text):
     return text.lower().strip()
 
 
-raw_path = "data/raw/train.csv"
-output_path = "data/processed/train_clean.csv"
-
-
 def main():
+    raw_path = "data/raw/train.csv"
+    output_path = "data/processed/train_clean.csv"
+
     if not os.path.exists(raw_path):
         raise FileNotFoundError(
             f"{raw_path} not found. Run download_data.py first."
@@ -27,4 +26,5 @@ def main():
     print(f"Done: saved {len(train_df)} rows to {output_path}")
 
 
-main()
+if __name__ == "__main__":
+    main()
