@@ -1,14 +1,9 @@
+from datasets import load_dataset
 import os
-
-
-source_train = "data/raw/train.csv"
-source_test = "data/raw/test.csv"
-
-if os.path.exists(source_train) and os.path.exists(source_test):
-    print("Local raw data already exists:")
-    print(f"  {source_train}")
-    print(f"  {source_test}")
-else:
-    raise FileNotFoundError(
-        "Local raw CSV files are missing. Put your dataset in data/raw/train.csv and data/raw/test.csv."
-    )
+os.makedirs('data/raw', exist_ok=True)
+ds = load_dataset('imdb')
+ds['train'].to_csv('data/raw/train.csv', index=False)
+ds['test'].to_csv('data/raw/test.csv', index=False)
+print('train:', len(ds['train']), 'rows')
+print('test: ', len(ds['test']), 'rows')
+print('Done!')
