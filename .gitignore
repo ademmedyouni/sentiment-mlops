@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.env
+.venv
+
+# DVC — track .dvc files but not the actual data
+data/raw/*.csv
+data/processed/
+models/model.pkl
+
+# MLflow local tracking (keep mlruns for local dev but exclude large artifacts)
+mlruns/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
+
+# Monitoring output
+monitoring/drift_report.html
+monitoring/production_logs.csv

@@ -1,0 +1,12 @@
+datasets
+pandas
+scikit-learn
+joblib
+mlflow
+fastapi
+uvicorn
+prometheus-client
+pytest
+dvc
+evidently
+pyyaml
