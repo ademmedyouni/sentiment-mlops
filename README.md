@@ -121,3 +121,4 @@ sentiment-mlops/
 | GET | /health | Health check |
 | GET | /metrics | Prometheus metrics |
 | GET | /docs | Interactive API docs |
+# Updated
