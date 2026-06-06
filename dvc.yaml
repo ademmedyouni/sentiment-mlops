@@ -4,8 +4,6 @@ stages:
     deps:
       - src/preprocess.py
       - data/raw/train.csv
-    outs:
-      - data/processed/train_clean.csv
 
   train:
     cmd: python src/train.py
@@ -13,8 +11,6 @@ stages:
       - src/train.py
       - data/processed/train_clean.csv
       - params.yaml
-    outs:
-      - models/model.pkl
     metrics:
       - metrics.json:
           cache: false
