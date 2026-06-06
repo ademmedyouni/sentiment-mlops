@@ -122,3 +122,4 @@ sentiment-mlops/
 | GET | /metrics | Prometheus metrics |
 | GET | /docs | Interactive API docs |
 # Updated
+# auto deploy test
